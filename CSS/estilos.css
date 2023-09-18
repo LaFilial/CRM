@@ -1,3 +1,44 @@
+:root{
+    --white: #ffffff;
+    --black:black;
+    --blue: #02afef;
+    --red: #f54747;
+    --yellow: #FEE066;
+    --gren: #93F37C;
+}
+
 body {
     background-color: black;
+    color: white;
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.BarraHerramientas{
+    background-color: rgb(43, 43, 43);
+    width: 20%;
+    height: 100vh;
+    padding: 10px 20px;
+}
+
+h1 {
+    font-size: 1.3vw;
+    font-weight: 200;
+}
+
+h3{
+    font-weight: 400;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+footer{
+    background-color: #02afef;
+    position: fixed;
+    bottom: 0;
+    margin: 0;
+    width: 100%;
+    
 }
