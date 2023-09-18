@@ -12,24 +12,14 @@
 
 </head>
 <body>
-    <section class="main-container">
- <!--Seccion de la barra de herramientas-->
-   <div class="container BarraHerramientas">
-        <div>
-            <h1>Barra de Herramientas</h1>
-        </div>
-    </div>
 
-<!--Seccion de la barra de herramientas-->
-   <div>
-        <div>
-           <h1>Escritorio</h1>
-        </div>
-   </div>
-</section>
+    <div class="desktop-menu">
+        <ul>
+            <li> <a href="/">Mi cuenta</a></li>
+        </ul>
+
+    </div>
+    
     
 </body>
-<footer>
-    <h3>Desarrollado por La_Filial 2024 © CRM Coworking </h3>
-</footer>
 </html>

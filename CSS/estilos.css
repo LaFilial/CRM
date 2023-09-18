@@ -21,6 +21,14 @@ body {
 
 /*Estilos de Login*/
 
+.main-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    
+    
+}
+
 .login{
     width: 100%;
     height: 100vh;
@@ -138,6 +146,11 @@ body {
     cursor: pointer;
 }
 
+.input-name,
+.input-email,
+.input-password{
+    margin-bottom: 22px;
+}
 
 
 
