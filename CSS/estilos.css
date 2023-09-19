@@ -8,7 +8,7 @@
     --gren: #93F37C;
     --sm: 14px;
     --md: 16px;
-    --lg: 18px;
+    --lg: 28px;
 }
 
 body {
@@ -55,6 +55,19 @@ body {
 .title{
     font-size: var(--lg);
     margin-bottom: 14px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.title-menu-mobil{
+    font-size: var(--lg);
+    margin-bottom: 14px;
+    font-weight: 700;
+}
+
+.title-miCuenta{
+    font-size: var(--lg);
+    margin-bottom: 40px;
     text-align: center;
     font-weight: 700;
 }
@@ -152,6 +165,115 @@ body {
     margin-bottom: 22px;
 }
 
+.desktop-menu{
+    width: 150px;
+    height: auto;
+    border: solid var(--white) 1px;
+    padding: 20px 20px 0 20px;
+    border-radius: 32px;
+}
+
+.desktop-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu ul li{
+    text-align: end;
+    
+}
+
+.desktop-menu ul li:last-child{
+    color: var(--white);
+    padding-top: 20px;
+    border-top: solid var(--grey) 1px;
+}
+
+.desktop-menu ul li .title-cerrar-sesion{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: var(--sm);
+}
+
+.desktop-menu ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--md);
+    display: inline-block;
+    margin-bottom: 20px;
+    
+}
+
+
+.desktop-mobil{
+    width: 250px;
+    height: 100vh;
+    padding: 20px 20px 0 20px;
+    border-right: solid var(--grey) 1px;
+    
+}
+
+.desktop-mobil ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-mobil ul li{
+    text-align: ;
+   
+    
+}
+
+.desktop-mobil ul li .title-mi-cuenta{
+    color: var(--white);
+   
+    
+    width: 100%;
+   
+    
+}
+
+.desktop-mobil ul li .title-cerrar-sesion{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: var(--md);
+}
+
+.desktop-mobil ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--md);
+    display: inline-block;
+    margin-bottom: 20px;
+    
+}
+
+.desktop-mobil .title-categories{
+    font-weight: 200;
+}
+
+
+.cerrar-sesion-mobil{
+    position: absolute;
+    bottom: 48px;
+    font-size: var(--sm);
+
+}
+
+.cerrar-sesion-mobil span{
+    color: var(--grey);
+}
+
+.cerrar-sesion-mobil a{
+    color: var(--blue);
+    text-decoration: none;
+    
+}
+
+
+
 
 
 @media (max-w){
@@ -162,23 +284,12 @@ body {
 
 
 
-.BarraHerramientas{
-    background-color: rgb(43, 43, 43);
-    width: 20%;
-    height: 100vh;
-    padding: 10px 20px;
-}
-
-h1 {
-    font-size: 1.3vw;
-    font-weight: 200;
-}
 
 h3{
     font-weight: 400;
     text-align: right;
     margin-right: 15px;
-    font-size: 14px;
+    font-size: var(--sm);
 }
 
 footer{
@@ -187,5 +298,4 @@ footer{
     bottom: 0;
     margin: 0;
     width: 100%;
-    
 }
