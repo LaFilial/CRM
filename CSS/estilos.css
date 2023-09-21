@@ -6,9 +6,16 @@
     --red: #f54747;
     --yellow: #fee066;
     --gren: #93F37C;
+    --ssm: 10px;
     --sm: 14px;
     --md: 16px;
     --lg: 28px;
+}
+
+header{
+    position: fixed;
+    width: 100vw;
+    background-color: #222222;
 }
 
 body {
@@ -214,7 +221,7 @@ body {
     width: 250px;
     height: 100vh;
     padding: 20px 20px 0 20px;
-    border-right: solid var(--grey) 1px;
+    border-right: solid var(--grey) 4px;
     
     
 }
@@ -261,8 +268,8 @@ body {
 
 
 .cerrar-sesion-mobil{
-    position: absolute;
-    bottom: 48px;
+    position: relative;
+    top:58vh;
     font-size: var(--sm);
 
 }
@@ -313,12 +320,13 @@ body {
 
 
 .notificacion-title h1{
-    text-align: center;
+    text-align: right;
     margin-bottom: 0;
+    color: var(--blue);
 }
 
 .notificacion-title p{
-    text-align: center;
+    text-align: right;
     margin-top: 0;
     margin-bottom: 40px;
 }
@@ -338,6 +346,7 @@ body {
 .Mi-escritorio{
     display: flex;
     width: 100%;
+    margin-top: 100px;
 }
 
 .img-mi-cuenta{
@@ -351,16 +360,17 @@ body {
     height: 100vh;
     display: grid;
     place-items: center;
+    align-items: start;
 }
 
 .mis-proyectos-content{
-    width: 80vw;
+    width: 95vw;
     margin-bottom: 72px;
 }
 
 .card-proyectos{
     display: grid;
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto auto auto auto auto;
     gap: 16px;
     border: solid var(--grey) 2px;
     margin: 16px;
@@ -374,6 +384,7 @@ body {
 .card-proyectos figure img{
     width: 40px;
     border-radius: 100%;
+    margin-top: 5px;
 }
 
 .card-proyectos figure{
@@ -390,6 +401,8 @@ body {
     text-decoration: none;
     font-size: var(--md);
     font-weight: 600;
+    display: inline-block;
+    margin-top: 5px;
 }
 
 .proyecto-amarillo{
@@ -406,8 +419,276 @@ body {
 
 .icono-option{
     height: 20px;
-    padding-bottom: 0px;
 }
+
+
+nav{
+    display: flex;
+    width: ;
+    justify-content: space-between;
+    padding: 0 48px ;
+    height: 100px;
+}
+
+.navbar-left{
+    display: flex;
+    align-items: center;
+}
+
+.navbar-left ul li a, .navbar-right ul li a{
+   text-decoration: none;
+   color: var(--white);
+   border: solid var(--white) 1px;
+   border-radius: 32px;
+   padding: 8px 16px;
+   font-weight: 200;
+   margin: 2px 4px;
+}
+
+.navbar-left ul li a:hover, .navbar-right ul li a:hover{
+    color: var(--blue);
+    border: solid var(--blue) 1px;  
+ }
+
+.menu{
+    display: none;
+}
+
+.logoMenu{
+    height: 80px;
+    margin-right: 32px;
+    
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.navbar-left ul, .navbar-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    
+}
+
+.navbar-email{
+    color: var(--blue);
+    font-size: var(--sm);
+    margin-right: 32px;
+}
+
+.navbar-miCuenta{
+    color: var(--white);
+    font-size: var(--sm);
+    margin-right: 16px;
+}
+
+.NotificacionesIcono{
+    width: 25px;
+    position: relative;
+    margin-right: 32px;
+    
+}
+
+.fotoIconoCuenta{
+    width: 50px;
+    height: 50px;
+    position: relative;
+}
+
+.fotoIconoCuenta img{
+    width: 50px;
+   border-radius: 100%;
+}
+
+.NotificacionesIcono div{
+    width: 16px;
+    height: 16px;
+    background-color: var(--blue);
+    border-radius: 100%;
+    font-size: var(--sm);
+    position: absolute;
+    top: -8px;
+    right: -4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.AddProyect p{
+    display: flex;
+    font-size: var(--lg);
+    align-items: center;
+    text-align: center;
+}
+
+.AddProyect{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.add-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 25px;
+ 
+}
+
+.add-content img{
+    width: 26px;
+}
+
+.contentAddProyect a{
+    text-decoration: none;
+    color: var(--white);
+}
+
+.contentAddProyect{
+    display: flex;
+    background-color: var(--blue);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentFilter{
+    display: flex;
+    background-color: var(--black);
+    height: 40px;
+    border-radius: 32px;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--white) 1px;
+    padding: 0 16px;
+    margin-left: 10px;
+}
+
+.contentFilter a{
+    text-decoration: none;
+    color: var(--white);
+   
+}
+
+.contentFilter a p{
+    font-size: var(--sm);
+}
+
+.contentArchive a{
+    display: flex;
+    background-color: var(--black);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 10px;
+}
+
+.icono-option{
+    display: flex;
+    background-color: ;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentSemaforoRojo{
+    display: flex;
+    background-color: var(--red);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentSemaforoRojoInactivo{
+    display: flex;
+    background-color: var(--red);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+}
+
+.contentSemaforoAmarillo{
+    display: flex;
+    background-color: var(--yellow);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentSemaforoAmarilloInactivo{
+    display: flex;
+    background-color: var(--yellow);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+}
+
+.contentSemaforoVerde{
+    display: flex;
+    background-color: var(--gren);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentSemaforoVerdeInactivo{
+    display: flex;
+    background-color: var(--gren);
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.3;
+}
+
+.EtiquetaProyectos{
+    display: flex;
+    background-color: var(--black);
+    height: 26px;
+    border-radius: 32px;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--white) 1px;
+    padding: 0 16px;
+    margin-left: 10px;
+}
+.EtiquetaProyectos a{
+    text-decoration: none;
+    color: var(--white);
+    font-size: var(--ssm);
+   
+}
+
+.contentEtiquetas{
+    display: flex;
+}
+
+
+
+
 
 
 
