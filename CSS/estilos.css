@@ -328,7 +328,7 @@ body {
 .notificacion-title p{
     text-align: right;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .card-notificaciones p a{
@@ -556,6 +556,24 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
+    margin-left: 16px;
+}
+
+.contentAtras{
+    display: flex;
+    background-color: var(--black);
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+    border: solid var(--white) 1px;
+   
+}
+
+.contentAtras a{
+    text-decoration: none;
+    color: var(--white);
 }
 
 .contentFilter{
@@ -567,7 +585,7 @@ nav{
     justify-content: center;
     border: solid var(--white) 1px;
     padding: 0 16px;
-    margin-left: 10px;
+    margin-left: 16px;
 }
 
 .contentFilter a{
@@ -582,14 +600,25 @@ nav{
 
 .contentArchive a{
     display: flex;
-    background-color: var(--black);
+    background-color:;
+    width: 20px;
+    height: 20px;
+    
+}
+
+.contentArchive{
+    display: flex;
+    border: solid var(--white) 1px;
     width: 40px;
     height: 40px;
+    margin-left: 16px;
     border-radius: 100%;
     align-items: center;
-    justify-content: center; 
-    margin-left: 10px;
+    justify-content: center;
+  
 }
+
+
 
 .icono-option{
     display: flex;
@@ -619,7 +648,7 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 .contentSemaforoAmarillo{
@@ -640,7 +669,7 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 .contentSemaforoVerde{
@@ -661,7 +690,7 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 .EtiquetaProyectos{
