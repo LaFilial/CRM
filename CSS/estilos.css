@@ -1,6 +1,7 @@
 :root{
     --white: #ffffff;
     --grey: #616161;
+    --greylight: #222222;
     --black:black;
     --blue: #02afef;
     --red: #f54747;
@@ -12,10 +13,14 @@
     --lg: 28px;
 }
 
+.inactive{
+   display: none !important; 
+}
+
 header{
     position: fixed;
     width: 100vw;
-    background-color: #222222;
+    background-color: var(--greylight);
 }
 
 body {
@@ -177,11 +182,45 @@ body {
 }
 
 .desktop-menu{
-    width: 150px;
+    position: absolute;
+    background-color: var(--black);
+    top: 100px;
+    right: 50px;
+    width: 200px;
     height: auto;
     border: solid var(--white) 1px;
     padding: 20px 20px 0 20px;
     border-radius: 32px;
+}
+
+.desktop-menu ul li:nth-child(1) a{
+    margin-bottom:0px !important;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.desktop-menu ul li:nth-child(2) a{
+    font-size: 12px;
+    margin-bottom: 0px !important;
+    color: var(--blue);
+}
+
+.desktop-menu ul li:nth-child(3) a{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.desktop-menu ul li:nth-child(4) a{
+    font-size: 12px;
+    margin-bottom: 0px;
+}
+
+.desktop-menu ul li:nth-child(5) a{
+    font-size: 12px;
+}
+
+.navbar-miCuenta{
+    cursor: pointer;
 }
 
 .desktop-menu ul{
@@ -218,11 +257,14 @@ body {
 
 
 .desktop-mobil{
+    position: absolute;
+    top: 100px;
+    left: 0;
     width: 250px;
     height: 100vh;
     padding: 20px 20px 0 20px;
-    border-right: solid var(--grey) 4px;
-    
+    border-right: solid var(--white) 1px;
+    background-color: var(--black);
     
 }
 
@@ -269,7 +311,7 @@ body {
 
 .cerrar-sesion-mobil{
     position: relative;
-    top:58vh;
+    top:50vh;
     font-size: var(--sm);
 
 }
@@ -285,11 +327,32 @@ body {
 }
 
 
+
+
 .mis-notificaciones{
-    width: 100%;
-    height: 100vh;
+    width: 30%;
+    height: auto;
     display: grid;
     place-items: center;
+    position: absolute;
+    right: 200px;
+    top: 100px;
+    background-color: var(--black);
+    border: solid var(--white) 1px;
+    border-radius: 32px;
+}
+
+.notificacion-title h1, .notificacion-title p{
+    margin-right: 24px;
+}
+
+.VerNotificiaciones{
+    padding: 12px;
+    text-align: center;
+}
+
+.VerNotificiaciones button{
+    width: 100%;
 }
 
 .card-notificaciones{
@@ -339,8 +402,8 @@ body {
 }
 
 .mis-notificaciones-content{
-    width: 480px;
-    margin-bottom: 72px;
+    width: 100%;
+    margin-bottom: 28px;
 }
 
 .Mi-escritorio{
@@ -463,6 +526,13 @@ nav{
   
 }
 
+.IconoMenuMobil{
+    height: 30px;
+    margin-right: 32px;
+    display: none;
+    cursor: pointer;
+}
+
 .navbar-left ul, .navbar-right ul {
     list-style: none;
     padding: 0;
@@ -489,6 +559,7 @@ nav{
     width: 25px;
     position: relative;
     margin-right: 32px;
+    cursor: pointer;
     
 }
 
@@ -496,6 +567,7 @@ nav{
     width: 50px;
     height: 50px;
     position: relative;
+    cursor: pointer;
 }
 
 .fotoIconoCuenta img{
@@ -713,7 +785,30 @@ nav{
 
 .contentEtiquetas{
     display: flex;
+    
 }
+
+
+
+@media (max-width: 860px)  {
+
+    .MenuEscritorioPrincipal{
+        display: none !important;
+    }
+
+    .IconoMenuMobil{
+        display: block;
+    }
+}
+
+@media (min-width: 860px)  {
+
+    .desktop-mobil{
+        display: none;
+    }
+}
+
+
 
 
 

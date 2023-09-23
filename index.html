@@ -18,9 +18,13 @@
         <img src="" alt="" class="menu">
 
         <div class="navbar-left">
-            <img src="./Logos/La_Filial-Logo-h1.gif" alt="" class="logoMenu">
 
-            <ul>
+            <img src="./Media/bars-staggered.svg" alt="" class="IconoMenuMobil">
+
+            <a href="/"> <img src="./Logos/La_Filial-Logo-h1.gif" alt="" class="logoMenu"></a>
+           
+
+            <ul class="MenuEscritorioPrincipal">
                 <li>
                     <a href="/">Agenda</a>
                 </li>
@@ -56,46 +60,54 @@
             </ul>
 
             
+        </div>     
+
+        <div class="desktop-menu inactive">
+            <ul>
+                <li> <a href="/" class="title-submenu">Johhny Paz</a></li>
+                <li> <a href="/" class="title-submenu">Administrador</a></li>
+                <li> <a href="/" class="title-submenu">Director Creativo</a></li>
+                <li> <a href="/" class="title-submenu">equipo@lafilial.com.co</a></li>
+                <li> <a href="/" class="title-submenu">+57 317 4767327</a></li>
+                <li> <a href="/" class="title-submenu">Editar cuenta</a></li>
+                <li> <a href="/" class="title-submenu">Crear usuario</a></li>
+
+                <li> <a href="/" class="title-cerrar-sesion">Cerrar Sesión</a></li>
+            </ul>
+    
+        </div>
+
+
+        <div class="desktop-mobil inactive">
+            <ul>
+                <h1 class="title-menu-mobil">Mi escritorio</h1>
+                <li> <a href="/" class="title-submenu title-categories">Agenda</a></li>
+                <li> <a href="/" class="title-submenu title-categories">Proyectos</a></li>
+                <li> <a href="/" class="title-submenu title-categories">Tareas</a></li>
+                
+            </ul>
+    
+            <ul>
+                <!-- <li> <a href="/" class="title-submenu title-mi-cuenta">Mi cuenta</a></li> -->
+                
+            </ul>
+    
+            <p class="cerrar-sesion-mobil">
+                <span>equipo@lafilial.com.co</span><br>
+                <a href="/">Cerrar Sesión</a>
+            </p>
+    
         </div>
 
     </nav>
-</header>
 
-<body>
+    <!--Notificaciones-->
 
-    <section class="Mi-escritorio">
-
-        <!--Barra Lateral Izquierda
-    <div class="desktop-mobil">
-        <ul>
-            
-            <li> <a href="/" class="title-submenu title-categories">Agenda</a></li>
-            <li> <a href="/" class="title-submenu title-categories">Proyectos</a></li>
-            <li> <a href="/" class="title-submenu title-categories">Tareas</a></li>
-            
-        </ul>
-
-        <ul>
-            <li> <a href="/" class="title-submenu title-mi-cuenta">Mi cuenta</a></li>
-            
-        </ul>
-
-        <p class="cerrar-sesion-mobil">
-            <span>equipo@lafilial.com.co</span><br>
-            <a href="/">Cerrar Sesión</a>
-        </p>
-
-    </div>
-
-    -->
-
-    <!--Notificaciones
-
-    <div class="mis-notificaciones">
+    <div class="mis-notificaciones inactive">
         <div class="mis-notificaciones-container">
             <div class="notificacion-title">
                 <h1 class="title-mi-cuenta">Notificaciones</h1>
-                <p>Miercoles 20 de septiembre</p>
+                <p>Miercoles 19 de septiembre</p>
             </div>
             
 
@@ -121,7 +133,7 @@
                     <figure>
                         <img src="./Media/Johnny-Paz_Instructor.jpg" alt="Foto Perfil">
                     </figure>
-                    <p><span class="Text-Resaltado">Cladia</span> Inicio un nuevo proyecto <span class="Text-Resaltado">Trafficker Pks</span></p>
+                    <p><span class="Text-Resaltado">Claudia</span> Inicio un nuevo proyecto <span class="Text-Resaltado">Trafficker Pks</span></p>
                     <p> <a href="/">Ver</a></p>
                 </div>
 
@@ -133,12 +145,28 @@
                     <p> <a href="/">Ver</a></p>
                 </div>
 
+                <div class="VerNotificiaciones">
+                    <button class="Secondary-button">Ver todas</button>
+                </div>
+
 
             </div>
 
         </div>
 
-    </div> -->
+        
+
+    </div>
+
+</header>
+
+<body>
+
+    <section class="Mi-escritorio">
+
+        
+
+   
 
     <!--Proyectos-->
 
@@ -327,6 +355,7 @@
 
 </section>
     
+<script src="./Js/main.js"></script>
 </body>
 <footer>
     <h3>Desarrollado por La_Filial 2024 © CRM Coworking </h3>
