@@ -1,6 +1,7 @@
 :root{
     --white: #ffffff;
     --grey: #616161;
+    --AzulOscuro: #0e101a;
     --greylight: #222222;
     --black:black;
     --blue: #02afef;
@@ -20,11 +21,11 @@
 header{
     position: fixed;
     width: 100vw;
-    background-color: var(--greylight);
+    background-color: var(--black);
 }
 
 body {
-    background-color: black;
+    background-color: var(--AzulOscuro);
     color: white;
     display: flex;
     font-family: 'Poppins', sans-serif;
@@ -349,6 +350,7 @@ body {
 .VerNotificiaciones{
     padding: 12px;
     text-align: center;
+    margin-bottom: 32px;
 }
 
 .VerNotificiaciones button{
@@ -386,6 +388,8 @@ body {
     text-align: right;
     margin-bottom: 0;
     color: var(--blue);
+    font-size: var(--md);
+    margin-top: 32px;
 }
 
 .notificacion-title p{
@@ -799,6 +803,16 @@ nav{
     .IconoMenuMobil{
         display: block;
     }
+
+    .mis-notificaciones{
+        width: 92%;
+        right: 36px;
+    }
+
+    .contenedorDeNotifiaciones{
+        padding: 0px 40px;
+    }
+
 }
 
 @media (min-width: 860px)  {
