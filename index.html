@@ -46,7 +46,7 @@
                 <li class="NotificacionesIcono">
                     <img src="./Media/bell.svg" alt="">
                     
-                    <div>2</div>
+                    <div class="CantidadNotificaciones"></div>
                 </li>
 
             <li class="navbar-miCuenta">Mi cuenta</li>
@@ -64,10 +64,10 @@
 
         <div class="desktop-menu inactive">
             <ul>
-                <li> <a href="/" class="title-submenu">Johhny Paz</a></li>
-                <li> <a href="/" class="title-submenu">Administrador</a></li>
-                <li> <a href="/" class="title-submenu">Director Creativo</a></li>
-                <li> <a href="/" class="title-submenu">equipo@lafilial.com.co</a></li>
+                <li> <p class="title-submenu">Johhny Paz</p></li>
+                <li> <p class="title-submenu">Administrador</p></li>
+                <li> <p class="title-submenu">Director Creativo</p></li>
+                <li> <p class="title-submenu">equipo@lafilial.com.co</p></li>
                 <li> <a href="/" class="title-submenu">+57 317 4767327</a></li>
                 <li> <a href="/" class="title-submenu">Editar cuenta</a></li>
                 <li> <a href="/" class="title-submenu">Crear usuario</a></li>
@@ -110,7 +110,7 @@
             <div class="mis-notificaciones-container">
                 <div class="notificacion-title">
                     <h1 class="title-mi-cuenta">Notificaciones</h1>
-                    <p>Miercoles 19 de septiembre</p>
+                    <p class="FechaHoy"></p>
                 </div>
                 
     
@@ -120,7 +120,7 @@
                 </div>
 
                 <div class="VerNotificiaciones">
-                    <button class="Secondary-button">Ver todas</button>
+                    <button href="/" class="Secondary-button">Ver todas</button>
                 </div>
     
             </div>
@@ -134,7 +134,7 @@
 
 </header>
 
-<body>
+<body class="">
 
     <section class="Mi-escritorio">
 
@@ -178,7 +178,7 @@
     
                 <div class="notificacion-title">
                     <h1 class="title-mi-cuenta">Proyectos <span>(4)</span></h1>
-                    <p>Jueves 21 de septiembre</p>
+                    <p class="FechaHoyProyectos"></p>
                 </div>
 
             </div>
@@ -188,6 +188,7 @@
             <div class="mis-proyectos-content">
 
                 <div class="card-proyectos proyecto-rojo">
+
                     <figure>
                         <img src="./Media/Johnny-Paz_Instructor.jpg" alt="Foto Perfil">
                     </figure>
@@ -218,8 +219,20 @@
                     </div>
 
                     <div class="contentEditTarea">
-                        <p> <a href="/"><img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></a></p>
+                        <p> <img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></p>
                     </div>
+
+                    <div class="Proyect-menu inactive">
+                        <ul>
+                            <li> <a href="/" class="title-submenu">Ver</a></li>
+                            <li> <a href="/" class="title-submenu">Editar</a></li>
+            
+                            <li> <a href="/" class="title-cerrar-sesion">Archivar</a></li>
+                        </ul>
+                
+                    </div>
+
+
                     
                 </div>
 
@@ -227,14 +240,13 @@
                     <figure>
                         <img src="./Media/Johnny-Paz_Instructor.jpg" alt="Foto Perfil">
                     </figure>
+
                     <p><span class="Text-Resaltado">Cotizacion Jose Olmos</span></p>
 
                     <div class="contentEtiquetas">
-
                         <div class="EtiquetaProyectos">
                             <a href="/"><p>Johnny Paz</p></a>
                         </div>
-                        
                     </div>
                     
                     <div class="contentSemaforoRojo">
@@ -250,9 +262,16 @@
                     </div>
 
                     <div class="contentEditTarea">
-                        <p> <a href="/"><img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></a></p>
+                        <p> <img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></p>
                     </div>
 
+                    <div class="Proyect-menu inactive">
+                        <ul>
+                            <li> <a href="/" class="title-submenu">Ver</a></li>
+                            <li> <a href="/" class="title-submenu">Editar</a></li>
+                            <li> <a href="/" class="title-cerrar-sesion">Archivar</a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="card-proyectos proyecto-amarillo">
@@ -282,7 +301,7 @@
                     </div>
 
                     <div class="contentEditTarea">
-                        <p> <a href="/"><img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></a></p>
+                        <p> <img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></p>
                     </div>
 
                 </div>
@@ -314,7 +333,7 @@
                     </div>
 
                     <div class="contentEditTarea">
-                        <p> <a href="/"><img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></a></p>
+                        <p> <img src="/Media/puntos-verticales.svg" alt="" class="icono-option"></p>
                     </div>
                 </div>
 

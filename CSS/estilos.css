@@ -22,6 +22,7 @@ header{
     position: fixed;
     width: 100vw;
     background-color: var(--black);
+    z-index: 9999;
 }
 
 body {
@@ -176,6 +177,11 @@ body {
     cursor: pointer;
 }
 
+.Secondary-button:hover{ 
+    border: solid var(--blue) 1px;
+    color: var(--blue);
+}
+
 .input-name,
 .input-email,
 .input-password{
@@ -192,28 +198,44 @@ body {
     border: solid var(--white) 1px;
     padding: 20px 20px 0 20px;
     border-radius: 32px;
+    z-index: 999999999;
 }
 
-.desktop-menu ul li:nth-child(1) a{
+.desktop-menu ul li:nth-child(1) p, .Proyect-menu ul li:nth-child(1) a{
     margin-bottom:0px !important;
     font-weight: 700;
     font-size: 22px;
+    margin-top: 0px;
 }
 
-.desktop-menu ul li:nth-child(2) a{
+.desktop-menu ul li:nth-child(2) p{
     font-size: 12px;
     margin-bottom: 0px !important;
     color: var(--blue);
+    margin-top: 0px;
 }
 
-.desktop-menu ul li:nth-child(3) a{
+.Proyect-menu ul li:nth-child(2) a{
     font-size: 12px;
-    margin-bottom: 0px;
+    color: var(--blue);
+    margin-bottom: 8px !important;
 }
 
-.desktop-menu ul li:nth-child(4) a{
+.desktop-menu ul li:nth-child(3) p{
     font-size: 12px;
     margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.Proyect-menu ul li:nth-child(3) a{
+    font-size: 12px;
+  
+}
+
+.desktop-menu ul li:nth-child(4) p{
+    font-size: 12px;
+    margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 .desktop-menu ul li:nth-child(5) a{
@@ -224,13 +246,13 @@ body {
     cursor: pointer;
 }
 
-.desktop-menu ul{
+.desktop-menu ul, .Proyect-menu ul{
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.desktop-menu ul li{
+.desktop-menu ul li, .Proyect-menu ul li{
     text-align: end;
     
 }
@@ -241,13 +263,26 @@ body {
     border-top: solid var(--grey) 1px;
 }
 
-.desktop-menu ul li .title-cerrar-sesion{
+.Proyect-menu ul li:last-child{
+    color: var(--white); 
+}
+
+.desktop-menu ul li .title-cerrar-sesion, .Proyect-menu ul li .title-cerrar-sesion{
     color: var(--blue);
     text-decoration: none;
     font-size: var(--sm);
 }
 
-.desktop-menu ul li a{
+.desktop-menu ul li a, .Proyect-menu ul li a{
+    color: var(--white);
+    text-decoration: none;
+    font-size: var(--md);
+    display: inline-block;
+    margin-bottom: 20px;
+    
+}
+
+.desktop-menu ul li p{
     color: var(--white);
     text-decoration: none;
     font-size: var(--md);
@@ -486,15 +521,18 @@ body {
 
 .icono-option{
     height: 20px;
+    cursor: pointer;
 }
 
 
 nav{
+    
     display: flex;
     width: ;
     justify-content: space-between;
     padding: 0 48px ;
     height: 100px;
+   
 }
 
 .navbar-left{
@@ -790,6 +828,23 @@ nav{
 .contentEtiquetas{
     display: flex;
     
+}
+
+.Proyect-menu{
+    position: absolute;
+    background-color: var(--black);
+    top: 60px;
+    right: 20px;
+    width: 100px;
+    height: auto;
+    border: solid var(--white) 1px;
+    padding: 20px 20px 0 20px;
+    border-radius: 32px;
+    z-index: 999;
+}
+
+.card-proyectos{
+   position: relative; 
 }
 
 
