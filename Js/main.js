@@ -5,11 +5,19 @@ const desktopMenu = document.querySelector(`.desktop-menu`);
 const OptionProyect = document.querySelector(`.icono-option`);
 const ProyectMenu = document.querySelector(`.Proyect-menu`);
 
+const contentAddProyect = document.querySelector(`.contentAddProyect`);
+const contentCreateProyect = document.querySelector(`.CrearProyectoContent`);
+
 const IconoMenuMobil = document.querySelector(`.IconoMenuMobil`);
 const desktopMobil = document.querySelector(`.desktop-mobil`);
 
 const NotificacionesIconoMenu = document.querySelector(`.NotificacionesIcono`);
 const ContentNotificaciones = document.querySelector(`.mis-notificaciones`);
+
+const cerrarCrearProyecto = document.querySelector(`.cerrarCrearProyecto`);
+
+const misProyectosContainer = document.querySelector(`.mis-proyectos-container`);
+const Header = document.querySelector(`.Cabecera`);
 
 //Contenedor de Notificaciones
 const contentNotification = document.querySelector(`.mis-notificaciones-content`);
@@ -29,6 +37,8 @@ fotoMenu.addEventListener(`click`, toggleDesktopMenu);
 IconoMenuMobil.addEventListener(`click`, toggleDesktopMobil);
 NotificacionesIconoMenu.addEventListener(`click`, toggleNotificacionesIconoMenu);
 OptionProyect.addEventListener(`click`, toggleProyectMenu);
+contentAddProyect.addEventListener(`click`, openCreateProyect);
+cerrarCrearProyecto.addEventListener(`click`, closedCrearProyecto);
 
 
 
@@ -39,6 +49,7 @@ function toggleDesktopMenu() {
     const IsdesktopMobilClosed = desktopMobil.classList.contains(`inactive`);
     const IsContentNotificacionesClosed = ContentNotificaciones.classList.contains(`inactive`);
     const IsProyectMenuClosed = ProyectMenu.classList.contains(`inactive`);
+    const IscontentCreateProyectClosed = contentCreateProyect.classList.contains(`inactive`);
 
     if (!IsContentNotificacionesClosed){
         ContentNotificaciones.classList.add(`inactive`); 
@@ -52,9 +63,13 @@ function toggleDesktopMenu() {
         ProyectMenu.classList.add(`inactive`);
     } 
 
-   
+    if (!IscontentCreateProyectClosed){
+        contentCreateProyect.classList.add(`inactive`);
+    } 
 
-    desktopMenu.classList.toggle(`inactive`);  
+    desktopMenu.classList.toggle(`inactive`); 
+    misProyectosContainer.classList.remove(`blur`);
+    Header.classList.remove(`blur`);
 }
 
 
@@ -64,6 +79,7 @@ function toggleNotificacionesIconoMenu() {
     const IsdesktopMenuClosed = desktopMenu.classList.contains(`inactive`);
     const IsdesktopMobilClosed = desktopMobil.classList.contains(`inactive`);
     const IsProyectMenuClosed = ProyectMenu.classList.contains(`inactive`);
+    const IscontentCreateProyectClosed = contentCreateProyect.classList.contains(`inactive`);
 
     if (!IsdesktopMenuClosed){
 
@@ -79,7 +95,13 @@ function toggleNotificacionesIconoMenu() {
         ProyectMenu.classList.add(`inactive`);
     }  
 
-    ContentNotificaciones.classList.toggle(`inactive`); 
+    if (!IscontentCreateProyectClosed){
+        contentCreateProyect.classList.add(`inactive`);
+    } 
+
+    ContentNotificaciones.classList.toggle(`inactive`);
+    misProyectosContainer.classList.remove(`blur`);
+    Header.classList.remove(`blur`);
 }
 
 // Abrimos y cerramos menu mobil lateral
@@ -88,6 +110,7 @@ function toggleDesktopMobil() {
     const IsdesktopMenuClosed = desktopMenu.classList.contains(`inactive`);
     const IsContentNotificacionesClosed = ContentNotificaciones.classList.contains(`inactive`);
     const IsProyectMenuClosed = ProyectMenu.classList.contains(`inactive`);
+    const IscontentCreateProyectClosed = contentCreateProyect.classList.contains(`inactive`);
 
     if (!IsdesktopMenuClosed){
 
@@ -102,15 +125,22 @@ function toggleDesktopMobil() {
         ProyectMenu.classList.add(`inactive`);
     } 
 
-    desktopMobil.classList.toggle(`inactive`);  
+    if (!IscontentCreateProyectClosed){
+        contentCreateProyect.classList.add(`inactive`);
+    } 
+
+    desktopMobil.classList.toggle(`inactive`);
+    
 }
 
 function toggleProyectMenu() {
     const IsdesktopMenuClosed = desktopMenu.classList.contains(`inactive`);
     const IsContentNotificacionesClosed = ContentNotificaciones.classList.contains(`inactive`);
+    const IscontentCreateProyectClosed = contentCreateProyect.classList.contains(`inactive`);
+    const IsdesktopMobilClosed = desktopMobil.classList.contains(`inactive`);
+    
 
     if (!IsdesktopMenuClosed){
-
         desktopMenu.classList.add(`inactive`); 
     }
 
@@ -118,8 +148,53 @@ function toggleProyectMenu() {
         ContentNotificaciones.classList.add(`inactive`); 
     }
 
+    if (!IscontentCreateProyectClosed){
+        contentCreateProyect.classList.add(`inactive`);
+    } 
+
+    if (!IsdesktopMobilClosed){
+
+        desktopMobil.classList.add(`inactive`); 
+    }
+
     
-    ProyectMenu.classList.toggle(`inactive`);  
+    ProyectMenu.classList.toggle(`inactive`);
+    misProyectosContainer.classList.remove(`blur`);
+    Header.classList.remove(`blur`);
+}
+
+function openCreateProyect() {
+    const IsdesktopMenuClosed = desktopMenu.classList.contains(`inactive`);
+    const IsContentNotificacionesClosed = ContentNotificaciones.classList.contains(`inactive`);
+    const IsProyectMenuClosed = ProyectMenu.classList.contains(`inactive`);
+    const IsdesktopMobilClosed = desktopMobil.classList.contains(`inactive`);
+
+    if (!IsContentNotificacionesClosed){
+        ContentNotificaciones.classList.add(`inactive`); 
+    }
+
+    if (!IsdesktopMenuClosed){
+        desktopMenu.classList.add(`inactive`); 
+    }
+
+    if (!IsProyectMenuClosed){
+        ProyectMenu.classList.add(`inactive`);
+    } 
+
+    if (!IsdesktopMobilClosed){
+
+        desktopMobil.classList.add(`inactive`); 
+    }
+
+    contentCreateProyect.classList.remove(`inactive`);  
+    misProyectosContainer.classList.add(`blur`);
+    Header.classList.add(`blur`);
+}
+
+function closedCrearProyecto(){
+    contentCreateProyect.classList.add(`inactive`);
+    misProyectosContainer.classList.remove(`blur`);
+    Header.classList.remove(`blur`);
 }
 
 
