@@ -581,14 +581,11 @@ body {
 }
 
 
-nav{
-    
+nav{  
     display: flex;
-    width: ;
     justify-content: space-between;
     padding: 0 48px ;
-    height: 100px;
-   
+    height: 100px;  
 }
 
 .navbar-left{
@@ -771,7 +768,6 @@ nav{
 
 .contentArchive a{
     display: flex;
-    background-color:;
     width: 20px;
     height: 20px;
     
@@ -793,7 +789,6 @@ nav{
 
 .icono-option{
     display: flex;
-    background-color: ;
     width: 24px;
     height: 24px;
     border-radius: 100%;
@@ -809,17 +804,7 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-}
-
-.contentSemaforoRojoInactivo{
-    display: flex;
-    background-color: var(--red);
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.1;
+    cursor: pointer;
 }
 
 .contentSemaforoAmarillo{
@@ -830,17 +815,7 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
-}
-
-.contentSemaforoAmarilloInactivo{
-    display: flex;
-    background-color: var(--yellow);
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.1;
+    cursor: pointer;
 }
 
 .contentSemaforoVerde{
@@ -851,16 +826,10 @@ nav{
     border-radius: 100%;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
-.contentSemaforoVerdeInactivo{
-    display: flex;
-    background-color: var(--gren);
-    width: 24px;
-    height: 24px;
-    border-radius: 100%;
-    align-items: center;
-    justify-content: center;
+.opacity{
     opacity: 0.1;
 }
 

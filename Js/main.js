@@ -19,6 +19,14 @@ const cerrarCrearProyecto = document.querySelector(`.cerrarCrearProyecto`);
 const misProyectosContainer = document.querySelector(`.mis-proyectos-container`);
 const Header = document.querySelector(`.Cabecera`);
 
+//Variables de semaforo
+
+const contentSemaforoRojo = document.querySelector(`.contentSemaforoRojo`);
+const contentSemaforoAmarillo = document.querySelector(`.contentSemaforoAmarillo`);
+const contentSemaforoVerde = document.querySelector(`.contentSemaforoVerde`);
+
+const cardProyectos = document.querySelector(`.card-proyectos`);
+
 //Contenedor de Notificaciones
 const contentNotification = document.querySelector(`.mis-notificaciones-content`);
 
@@ -39,6 +47,11 @@ NotificacionesIconoMenu.addEventListener(`click`, toggleNotificacionesIconoMenu)
 OptionProyect.addEventListener(`click`, toggleProyectMenu);
 contentAddProyect.addEventListener(`click`, openCreateProyect);
 cerrarCrearProyecto.addEventListener(`click`, closedCrearProyecto);
+
+//Funciones de semaforos
+contentSemaforoRojo.addEventListener(`click`, toggleSemaforoRojo);
+contentSemaforoAmarillo.addEventListener(`click`, toggleSemaforoAmarillo);
+contentSemaforoVerde.addEventListener(`click`, toggleSemaforoVerde);
 
 
 
@@ -159,8 +172,7 @@ function toggleProyectMenu() {
 
     
     ProyectMenu.classList.toggle(`inactive`);
-    misProyectosContainer.classList.remove(`blur`);
-    Header.classList.remove(`blur`);
+    
 }
 
 function openCreateProyect() {
@@ -337,6 +349,92 @@ MostrarNotificaciones(notificationList);
 
 const FechaHoy = document.querySelector(`.FechaHoy`);
 FechaHoy.innerText = hoy;
+
+//Funciones de semaforo
+
+function toggleSemaforoRojo (){
+    const IsActiveYellow = contentSemaforoAmarillo.classList.contains(`opacity`);
+    const IsActiveGreen = contentSemaforoVerde.classList.contains(`opacity`);
+
+    const IsCardActive = cardProyectos.classList.add(`proyecto-rojo`);
+
+    if (!IsActiveYellow){
+        contentSemaforoAmarillo.classList.add(`opacity`); 
+    }
+
+    if (!IsActiveGreen){
+        contentSemaforoVerde.classList.add(`opacity`); 
+    }
+
+    if(IsCardActive){
+        cardProyectos.classList.replace(`proyecto-amarillo`, `proyecto-rojo`); 
+    }
+
+    if(IsCardActive){
+        cardProyectos.classList.contains(`proyecto-roja`); 
+    }else{
+        cardProyectos.classList.remove(`proyecto-verde`); 
+    }
+
+    contentSemaforoRojo.classList.toggle(`opacity`);
+
+}
+
+function toggleSemaforoAmarillo (){
+    const IsActiveRed = contentSemaforoRojo.classList.contains(`opacity`);
+    const IsActiveGreen = contentSemaforoVerde.classList.contains(`opacity`);
+
+    const IsCardActive = cardProyectos.classList.contains(`proyecto-rojo`);
+
+    if (!IsActiveRed){
+        contentSemaforoRojo.classList.add(`opacity`); 
+    }
+
+    if (!IsActiveGreen){
+        contentSemaforoVerde.classList.add(`opacity`); 
+    }
+
+    if (IsCardActive){
+        cardProyectos.classList.replace(`proyecto-rojo`, `proyecto-amarillo`); 
+    }else{
+        const IsCardActive = cardProyectos.classList.contains(`proyecto-verde`);
+
+        cardProyectos.classList.replace(`proyecto-verde`, `proyecto-amarillo`);
+
+    }
+
+   
+    contentSemaforoAmarillo.classList.toggle(`opacity`);
+}
+
+function toggleSemaforoVerde (){
+    const IsActiveYellow = contentSemaforoAmarillo.classList.contains(`opacity`);
+    const IsActiveRed = contentSemaforoRojo.classList.contains(`opacity`);
+
+    const IsCardActive = cardProyectos.classList.contains(`proyecto-amarillo`);
+    
+    if (!IsActiveYellow){
+        contentSemaforoAmarillo.classList.add(`opacity`); 
+    }
+
+    if (!IsActiveRed){
+        contentSemaforoRojo.classList.add(`opacity`); 
+    }
+
+    if (IsCardActive){
+        cardProyectos.classList.replace(`proyecto-amarillo`, `proyecto-verde`); 
+    }
+
+    if (IsCardActive){
+        const IsCardActive = cardProyectos.classList.contains(`proyecto-roja`);
+    }else{
+        const IsCardActive = cardProyectos.classList.remove(`proyecto-roja`);
+    }
+
+    contentSemaforoVerde.classList.toggle(`opacity`);
+}
+
+
 
 
 
