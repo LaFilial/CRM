@@ -100,8 +100,17 @@ body {
     width: 160%;
 }
 
+.form-container-cuenta{
+    margin-top: 20px;
+    padding: 40px;
+    border-radius: 32px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 32%;
+}
+
 .Logo{
-    width: 48%;
+    width: 40%;
     margin-bottom: 40px;
     justify-self: center;
    
@@ -227,7 +236,7 @@ body {
 .input-email,
 .input-password,
 .input-tipo{
-    margin-bottom: 22px;
+    margin-bottom: 8px;
 }
 
 .input-tipo{
@@ -331,8 +340,11 @@ body {
     text-decoration: none;
     font-size: var(--md);
     display: inline-block;
-    margin-bottom: 20px;
-    
+    margin-bottom: 20px;  
+}
+
+.desktop-menu ul li a:hover, .Proyect-menu ul li a:hover{
+    color: var(--blue);
 }
 
 .desktop-menu ul li p{

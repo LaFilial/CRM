@@ -10,15 +10,140 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
 </head>
+
+<header class="Cabecera">
+
+    <nav>
+        <img src="" alt="" class="menu">
+
+        <div class="navbar-left">
+
+            <img src="./Media/bars-staggered.svg" alt="" class="IconoMenuMobil">
+
+            <a href="/"> <img src="./Logos/La_Filial-Logo-h1.gif" alt="" class="logoMenu"></a>
+           
+
+            <ul class="MenuEscritorioPrincipal">
+                <li>
+                    <a href="/">Agenda</a>
+                </li>
+
+                <li>
+                    <a href="/">Proyectos</a>
+                </li>
+
+                <li>
+                    <a href="/">Tareas</a>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="navbar-right">
+
+            <ul>
+                <li class="NotificacionesIcono">
+                    <img src="./Media/bell.svg" alt="">
+                    
+                    <div class="CantidadNotificaciones"></div>
+                </li>
+
+            <li class="navbar-miCuenta">Mi cuenta</li>
+            
+
+            <li class="fotoIconoCuenta">
+                <img src="./Media/Johnny-Paz_Instructor.jpg" alt="">
+                
+                </li>
+
+            </ul>
+
+            
+        </div>     
+
+        <div class="desktop-menu inactive">
+            <ul>
+                <li> <p class="title-submenu">Johhny Paz</p></li>
+                <li> <p class="title-submenu">Administrador</p></li>
+                <li> <p class="title-submenu">Director Creativo</p></li>
+                <li> <p class="title-submenu">equipo@lafilial.com.co</p></li>
+                <li> <a href="/" class="title-submenu">+57 317 4767327</a></li>
+                <li> <a href="/" class="title-submenu">Editar cuenta</a></li>
+                <li> <a href="/" class="title-submenu">Crear usuario</a></li>
+
+                <li> <a href="/" class="title-cerrar-sesion">Cerrar Sesión</a></li>
+            </ul>
+    
+        </div>
+
+
+        <div class="desktop-mobil inactive">
+            <ul>
+                <h1 class="title-menu-mobil">Mi escritorio</h1>
+                <li> <a href="/" class="title-submenu title-categories">Agenda</a></li>
+                <li> <a href="/" class="title-submenu title-categories">Proyectos</a></li>
+                <li> <a href="/" class="title-submenu title-categories">Tareas</a></li>
+                
+            </ul>
+    
+            <ul>
+                <!-- <li> <a href="/" class="title-submenu title-mi-cuenta">Mi cuenta</a></li> -->
+                
+            </ul>
+    
+            <p class="cerrar-sesion-mobil">
+                <span>equipo@lafilial.com.co</span><br>
+                <a href="/">Cerrar Sesión</a>
+            </p>
+    
+        </div>
+
+    </nav>
+
+    <!--Notificaciones-->
+
+    <div class="contenedorDeNotifiaciones">
+
+        <div class="mis-notificaciones inactive">
+
+            <div class="mis-notificaciones-container">
+                <div class="notificacion-title">
+                    <h1 class="title-mi-cuenta">Notificaciones</h1>
+                    <p class="FechaHoy"></p>
+                </div>
+                
+    
+                <div class="mis-notificaciones-content">
+                    <!--Contenedor Notificaciones-->
+
+                </div>
+
+                <div class="VerNotificiaciones">
+                    <button class="Secondary-button">Ver todas</button>
+                </div>
+    
+            </div>
+    
+            
+    
+        </div>
+
+    </div>
+    
+
+</header>
+
 <body>
+
     <div class="login">
-        <div class="form-container">
+
+        <div class="form-container-cuenta">
             
                 
             <img src="./Media/Johnny-Paz_Instructor.jpg" alt="Foto Perfil" class="img-mi-cuenta">
                 
             
-            <h1 class="title-miCuenta">Mi cuenta</h1>
+            <h1 class="title-miCuenta">Crear Usuario</h1>
 
             <form action="/" class="form">
                 <label for="Name" class="label">Nombre</label>
@@ -27,7 +152,19 @@
                 <label for="Email" class="label">Correo Electrónico</label>
                 <input type="text" id="Email" placeholder="usuario@correo.com" class="input input-email">
 
+                <label for="number" class="label">WhatsApp</label>
+                <input type="text" id="" placeholder="+57 317 4767327" class="input input-name">
+
+                <label class="label">Rol de usuario</label>
+                <select for="dwarfs" name="" id="" class="input input-tipo">
+                    <option value="">Freelance</option>
+                    <option value="">Socio</option>
+                </select>
+
                 <label for="password" class="label">Contraseña</label>
+                <input type="password" id="password" placeholder="********" class="input input-password">
+
+                <label for="password" class="label">Repite tu contraseña</label>
                 <input type="password" id="password" placeholder="********" class="input input-password">
 
                 <input type="button" value="Crear cuenta" class="button-primary login-button">
@@ -35,6 +172,7 @@
         </div>
 
     </div>
+
     
 </body>
 

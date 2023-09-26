@@ -233,7 +233,7 @@ notificationList.push({
     NameUser: `Julie Roa`,
     Mensage: `te ha agregado al proyecto`,
     nameProyect: `Tienda Virtual Licores JR`,
-    UrlProyect: `/`,
+    UrlProyect: `/proyecto.html`,
 
 });
 
